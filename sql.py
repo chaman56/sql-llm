@@ -62,7 +62,7 @@ if question:
     response=get_gemini_response(question,prompt)
     print(response)
     st.code(response, language='sql')
-    heads,response=read_sql_query(response,r"C:\Users\ycham\OneDrive\Desktop\WorkSpace\student.db")
+    heads,response=read_sql_query(response,r"./student.db")
     st.subheader("The Response is")
     st.text(heads)
     for row in response:
